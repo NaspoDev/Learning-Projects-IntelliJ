@@ -1,4 +1,4 @@
-package main.java.dev.naspo.designpatterns.factory;
+package main.java.dev.naspo.designpatterns.creationalpatterns.factory;
 
 // The burger factory class, to create different types of pre-defined burgers.
 public class BurgerFactory {

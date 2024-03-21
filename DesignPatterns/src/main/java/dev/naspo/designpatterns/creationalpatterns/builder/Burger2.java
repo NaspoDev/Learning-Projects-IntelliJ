@@ -1,4 +1,4 @@
-package main.java.dev.naspo.designpatterns.builder;
+package main.java.dev.naspo.designpatterns.creationalpatterns.builder;
 
 // Burger class, to be built by the BurgerBuilder.
 public class Burger2 {

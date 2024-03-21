@@ -1,4 +1,4 @@
-package main.java.dev.naspo.designpatterns.builder;
+package main.java.dev.naspo.designpatterns.creationalpatterns.builder;
 
 // BurgerBuilder class, to build a burger step by step.
 // Each step return the BurgerBuilder object (itself), so we can chain the steps together.

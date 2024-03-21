@@ -1,4 +1,4 @@
-package main.java.dev.naspo.designpatterns.factory;
+package main.java.dev.naspo.designpatterns.creationalpatterns.factory;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package main.java.dev.naspo.designpatterns.singleton;
+package main.java.dev.naspo.designpatterns.creationalpatterns.singleton;
 
 // Singleton is used when we want to have only one instance of a class.
 // A good example of this is having a single instance of our application state.

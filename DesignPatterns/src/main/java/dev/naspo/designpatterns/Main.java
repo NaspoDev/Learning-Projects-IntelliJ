@@ -1,10 +1,10 @@
 package main.java.dev.naspo.designpatterns;
 
-import main.java.dev.naspo.designpatterns.builder.Burger2;
-import main.java.dev.naspo.designpatterns.builder.BurgerBuilder;
-import main.java.dev.naspo.designpatterns.factory.Burger;
-import main.java.dev.naspo.designpatterns.factory.BurgerFactory;
-import main.java.dev.naspo.designpatterns.singleton.App;
+import main.java.dev.naspo.designpatterns.creationalpatterns.builder.Burger2;
+import main.java.dev.naspo.designpatterns.creationalpatterns.builder.BurgerBuilder;
+import main.java.dev.naspo.designpatterns.creationalpatterns.factory.Burger;
+import main.java.dev.naspo.designpatterns.creationalpatterns.factory.BurgerFactory;
+import main.java.dev.naspo.designpatterns.creationalpatterns.singleton.App;
 
 // Learning fundamental programming design patterns.
 public class Main {
@@ -15,8 +15,8 @@ public class Main {
 
         Within these, they can be divided into 3 categories:
             1. Creational patterns
-            2. Structural patterns
-            3. Behavioural patterns
+            2. Behavioural patterns
+            3. Structural patterns
          */
 
         System.out.println("Learning Design Patterns");
@@ -45,5 +45,9 @@ public class Main {
         App app2 = App.getAppState(); // this will return the same instance as app1
         app2.logIn();
         System.out.println(app1.isLoggedIn()); // true
+
+        // 4. Observer (aka PubSub)
+        // The observer pattern is a behavioural pattern that allows an object (the publisher) to notify
+        // other objects (the subscribers) upon some action.
     }
 }
