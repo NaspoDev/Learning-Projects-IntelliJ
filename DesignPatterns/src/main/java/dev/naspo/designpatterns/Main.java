@@ -1,5 +1,7 @@
 package main.java.dev.naspo.designpatterns;
 
+import main.java.dev.naspo.designpatterns.behavioualpatterns.observer.YoutubeChannel;
+import main.java.dev.naspo.designpatterns.behavioualpatterns.observer.YoutubeUser;
 import main.java.dev.naspo.designpatterns.creationalpatterns.builder.Burger2;
 import main.java.dev.naspo.designpatterns.creationalpatterns.builder.BurgerBuilder;
 import main.java.dev.naspo.designpatterns.creationalpatterns.factory.Burger;
@@ -49,5 +51,11 @@ public class Main {
         // 4. Observer (aka PubSub)
         // The observer pattern is a behavioural pattern that allows an object (the publisher) to notify
         // other objects (the subscribers) upon some action.
+        YoutubeChannel channel = new YoutubeChannel("Naspo");
+        channel.subscribe(new YoutubeUser("xXGamerXx"));
+        channel.subscribe(new YoutubeUser("randomUser123"));
+        channel.subscribe(new YoutubeUser("DanTheMan"));
+        // We only have to call notify once and all the subscribers will be notified.
+        channel.notify("New video uploaded!");
     }
 }
