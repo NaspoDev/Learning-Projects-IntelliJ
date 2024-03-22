@@ -71,3 +71,19 @@ A structural pattern that allows incompatible interfaces to work together.
 Example:\
 Usb Cable can plug into a USB port, but a microUSB cable cannot. You can use an adapter to
 make them work together.
+
+### Facade
+A structural pattern that provides a simplified interface to a complex system.
+
+Example:\
+We can create an OrderFacade class that has a `createOrder()` method. When this method is called, 
+it will call/run all the other necessary logic to actually create an order. Like `Waiter.writeOrder()`,
+`Waiter.sendToKitchen()`, `Chef.cookOrder()`, etc...
+
+Example #2:\
+Another example could be HTTP apis that abstract away the complexity of making HTTP requests.\
+Like javascript's built-in `fetch()` API.
+
+Example #3:\
+ArrayLists in Java. They are a facade for arrays. You can add, remove, get elements easily,
+but under the hood it's an actual array. It's resizing the array, shifting elements, etc...
