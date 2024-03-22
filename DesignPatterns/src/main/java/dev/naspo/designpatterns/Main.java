@@ -3,6 +3,9 @@ package main.java.dev.naspo.designpatterns;
 import main.java.dev.naspo.designpatterns.behavioualpatterns.iterator.SinglyLinkedList;
 import main.java.dev.naspo.designpatterns.behavioualpatterns.observer.YoutubeChannel;
 import main.java.dev.naspo.designpatterns.behavioualpatterns.observer.YoutubeUser;
+import main.java.dev.naspo.designpatterns.behavioualpatterns.strategy.RemoveNegativeStrategy;
+import main.java.dev.naspo.designpatterns.behavioualpatterns.strategy.RemoveOddStrategy;
+import main.java.dev.naspo.designpatterns.behavioualpatterns.strategy.Values;
 import main.java.dev.naspo.designpatterns.creationalpatterns.builder.Burger2;
 import main.java.dev.naspo.designpatterns.creationalpatterns.builder.BurgerBuilder;
 import main.java.dev.naspo.designpatterns.creationalpatterns.factory.Burger;
@@ -69,5 +72,10 @@ public class Main {
         linkedList.iterate();
 
         // 6. Strategy
+        // A behavioural pattern that allows you to define a family of algorithms, following the open-closed principle.
+        // These algorithms can be implemented in different ways as needed.
+        Values values = new Values(new int[]{-7, -4, -1, 0, 2, 6, 9});
+        System.out.println(values.filterValues(new RemoveNegativeStrategy())); // [0, 2, 6, 9]
+        System.out.println(values.filterValues(new RemoveOddStrategy())); // [-4, 0, 2, 6]
     }
 }

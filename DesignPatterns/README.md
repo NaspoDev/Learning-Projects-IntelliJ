@@ -56,3 +56,9 @@ Example:\
 Iterating through a binary tree or a linked list.
 
 ### Strategy
+A behavioural pattern that allows you to define a family of algorithms, following the open-closed principle.
+Open to extension, closed to modification.
+
+Example:\
+A Filter Strategy that can be applied to a list of items. You can have different implementations of the
+filter strategy, like remove all odd numbers, remove all negative numbers, etc...
