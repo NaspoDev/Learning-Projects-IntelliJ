@@ -92,5 +92,8 @@ public class Main {
         MicroUsbCable microUsbCable = new MicroUsbCable();
         MicroToUsbAdapter adapter = new MicroToUsbAdapter(microUsbCable);
         usbPort2.plug(adapter);
+
+        // 8. Facade
+        // See README.md
     }
 }
