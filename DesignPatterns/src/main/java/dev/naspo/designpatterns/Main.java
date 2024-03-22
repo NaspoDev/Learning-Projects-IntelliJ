@@ -11,6 +11,10 @@ import main.java.dev.naspo.designpatterns.creationalpatterns.builder.BurgerBuild
 import main.java.dev.naspo.designpatterns.creationalpatterns.factory.Burger;
 import main.java.dev.naspo.designpatterns.creationalpatterns.factory.BurgerFactory;
 import main.java.dev.naspo.designpatterns.creationalpatterns.singleton.App;
+import main.java.dev.naspo.designpatterns.structuralpatterns.adpater.MicroToUsbAdapter;
+import main.java.dev.naspo.designpatterns.structuralpatterns.adpater.MicroUsbCable;
+import main.java.dev.naspo.designpatterns.structuralpatterns.adpater.UsbCable;
+import main.java.dev.naspo.designpatterns.structuralpatterns.adpater.UsbPort;
 
 // Learning fundamental programming design patterns.
 public class Main {
@@ -77,5 +81,16 @@ public class Main {
         Values values = new Values(new int[]{-7, -4, -1, 0, 2, 6, 9});
         System.out.println(values.filterValues(new RemoveNegativeStrategy())); // [0, 2, 6, 9]
         System.out.println(values.filterValues(new RemoveOddStrategy())); // [-4, 0, 2, 6]
+
+        // 7. Adapter
+        // A structural pattern that allows incompatible interfaces to work together.
+        UsbPort usbPort1 = new UsbPort();
+        UsbCable usbCable1 = new UsbCable();
+        usbPort1.plug(usbCable1);
+
+        UsbPort usbPort2 = new UsbPort();
+        MicroUsbCable microUsbCable = new MicroUsbCable();
+        MicroToUsbAdapter adapter = new MicroToUsbAdapter(microUsbCable);
+        usbPort2.plug(adapter);
     }
 }

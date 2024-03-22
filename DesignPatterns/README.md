@@ -62,3 +62,12 @@ Open to extension, closed to modification.
 Example:\
 A Filter Strategy that can be applied to a list of items. You can have different implementations of the
 filter strategy, like remove all odd numbers, remove all negative numbers, etc...
+
+## Structural Patterns
+
+### Adapter
+A structural pattern that allows incompatible interfaces to work together.
+
+Example:\
+Usb Cable can plug into a USB port, but a microUSB cable cannot. You can use an adapter to
+make them work together.
