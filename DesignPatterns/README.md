@@ -48,3 +48,11 @@ other observers (aka the subscribers) upon some action.
 Example:\
 A YouTube channel has many subscribers. When the channel uploads a new video, all the subscribers
 are notified.
+
+### Iterator
+A behavioural pattern that defines how the values in an object can be iterated through.
+
+Example:\
+Iterating through a binary tree or a linked list.
+
+### Strategy

@@ -1,5 +1,6 @@
 package main.java.dev.naspo.designpatterns;
 
+import main.java.dev.naspo.designpatterns.behavioualpatterns.iterator.SinglyLinkedList;
 import main.java.dev.naspo.designpatterns.behavioualpatterns.observer.YoutubeChannel;
 import main.java.dev.naspo.designpatterns.behavioualpatterns.observer.YoutubeUser;
 import main.java.dev.naspo.designpatterns.creationalpatterns.builder.Burger2;
@@ -57,5 +58,16 @@ public class Main {
         channel.subscribe(new YoutubeUser("DanTheMan"));
         // We only have to call notify once and all the subscribers will be notified.
         channel.notify("New video uploaded!");
+
+        // 5. Iterator
+        // A behavioural pattern that defines how the values in an object can be iterated through.
+        SinglyLinkedList linkedList = new SinglyLinkedList();
+        linkedList.addNode(1);
+        linkedList.addNode(2);
+        linkedList.addNode(3);
+        linkedList.addNode(4);
+        linkedList.iterate();
+
+        // 6. Strategy
     }
 }
