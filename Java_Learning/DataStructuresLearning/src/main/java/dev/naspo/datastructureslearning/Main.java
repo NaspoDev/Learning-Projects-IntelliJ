@@ -48,6 +48,23 @@ public class Main {
         System.out.println(peopleAndAges);
         System.out.println("Jack is " + peopleAndAges.get("Jack") + " years old.");
 
+        // == HashSet ==
+        /*
+        A HashSet is a collection of items where each item is unique.
+        If you try to add an item that exists in the HashSet, it will
+        be ignored.
+        - Does not maintain order.
+
+        When we put an object into a HashSet, it uses the object’s
+        hashcode value to determine if an element is not in the set already.
+         */
+        HashSet<Integer> set = new HashSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        System.out.println(set.contains(4));
+        int setSize = set.size();
+
         // === Queue ===
         // First in, first out.
         // Based on LinkedLists.
