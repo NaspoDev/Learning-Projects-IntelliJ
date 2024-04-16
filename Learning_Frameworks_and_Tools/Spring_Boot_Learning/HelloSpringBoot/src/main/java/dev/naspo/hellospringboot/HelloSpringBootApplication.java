@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 // Following the Spring Boot quick-start guide: https://spring.io/quickstart
 
 @SpringBootApplication // This annotation is used to define the class as a Spring Boot application.
-@RestController // This annotation is used to define the class as a REST controller.
+@RestController // This annotation is used to define the class as a REST controller. (Handles requests).
 public class HelloSpringBootApplication {
 
 	// The main method is the entry point of the application.
@@ -17,6 +17,7 @@ public class HelloSpringBootApplication {
 		SpringApplication.run(HelloSpringBootApplication.class, args);
 	}
 
+	// @GetMapping("/route") defines this method as a GET method for the specified route.
 	// This method is used to define a route that returns a greeting message.
 	// @RequestParam is used to define a query parameter.
 	@GetMapping("/hello")
