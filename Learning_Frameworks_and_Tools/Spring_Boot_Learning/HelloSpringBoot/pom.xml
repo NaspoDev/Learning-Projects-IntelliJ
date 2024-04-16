@@ -11,9 +11,9 @@
 	</parent>
 
 	<groupId>dev.naspo</groupId>
-	<artifactId>hello-spring-boot</artifactId>
+	<artifactId>HelloSpringBoot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hello-spring-boot</name>
+	<name>HelloSpringBoot</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
