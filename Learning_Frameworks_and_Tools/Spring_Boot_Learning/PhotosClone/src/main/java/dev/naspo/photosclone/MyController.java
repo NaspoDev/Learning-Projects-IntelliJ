@@ -1,8 +1,11 @@
 package dev.naspo.photosclone;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+
 import java.util.List;
 
 // The @RestController annotation defines a class as a REST controller. (The class handles requests).
@@ -33,6 +36,7 @@ public class MyController {
             }
         }
 
-        return null;
+        // Throw 404 error if photos doesn't exist.
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
 }
