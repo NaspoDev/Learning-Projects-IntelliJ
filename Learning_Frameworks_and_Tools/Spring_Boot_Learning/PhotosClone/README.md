@@ -7,3 +7,4 @@ Following [this](https://youtube.com/watch?v=QuvS_VLbGko&ab_channel=MarcoCodes) 
 # Dependencies 
 - Spring Data JDBC to make working with the database easier.
 - We will be using an H2 Database for this project. (In-memory database).
+- Spring Boot Starter Validation to add validation annotations to our project. (Ex. @Email, @NotNull, etc...)

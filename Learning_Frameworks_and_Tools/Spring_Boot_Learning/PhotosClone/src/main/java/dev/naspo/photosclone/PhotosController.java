@@ -1,12 +1,13 @@
 package dev.naspo.photosclone;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotEmpty;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 // The @RestController annotation defines a class as a REST controller. (The class handles requests).
 @RestController
@@ -60,7 +61,7 @@ public class PhotosController {
     // @RequestBody annotation automatically converts the JSON post request body into
     // the Java object provided. (In this case it will create a Photo object with it).
     @PostMapping("/photos")
-    public Photo createPhoto(@RequestBody Photo photo) {
+    public Photo createPhoto(@RequestBody @Valid Photo photo) {
         db.add(photo);
         return photo;
     }

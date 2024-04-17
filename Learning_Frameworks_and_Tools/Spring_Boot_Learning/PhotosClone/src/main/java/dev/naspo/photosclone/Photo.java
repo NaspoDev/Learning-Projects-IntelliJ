@@ -1,10 +1,13 @@
 package dev.naspo.photosclone;
 
+import jakarta.validation.constraints.NotNull;
+
 import java.util.UUID;
 
 // Photo Data Class
 public class Photo {
     private String id;
+    @NotNull
     private String fileName;
 
      /*
