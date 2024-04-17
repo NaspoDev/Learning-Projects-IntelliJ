@@ -1,19 +1,22 @@
 package dev.naspo.photosclone;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 // The @RestController annotation defines a class as a REST controller. (The class handles requests).
 @RestController
-public class MyController {
-
+public class PhotosController {
     // mock database of photos.
-    private List<Photo> db = List.of(new Photo("1", "hello.jpg"));
+    private List<Photo> db = new ArrayList<>();
+
+    public PhotosController() {
+        db.add(new Photo("hello.jpg"));
+    }
 
     // @GetMapping("/route") defines this method as a GET method for the specified route.
     @GetMapping("/")
@@ -38,5 +41,27 @@ public class MyController {
 
         // Throw 404 error if photos doesn't exist.
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    }
+
+    // Delete a photo.
+    @DeleteMapping("/photos/{id}")
+    public void deletePhoto(@PathVariable String id) {
+        for (int i = 0; i < db.size(); i++) {
+            if (db.get(i).getId().equals(id)) {
+                db.remove(i);
+                return;
+            }
+        }
+
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    }
+
+    // Post a photo.
+    // @RequestBody annotation automatically converts the JSON post request body into
+    // the Java object provided. (In this case it will create a Photo object with it).
+    @PostMapping("/photos")
+    public Photo createPhoto(@RequestBody Photo photo) {
+        db.add(photo);
+        return photo;
     }
 }
